@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 
 .App {
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 600;
 }
 
@@ -29,18 +29,17 @@
 
 .ScoreboardContainer {
   display: flex;
-  border: solid 2px rgba(255,255,255,.5);
+  border: solid 2px rgba(255, 255, 255, 0.5);
   border-radius: 5px;
   padding: 1.5% 2.5%;
   justify-content: space-between;
 }
 
 .ScoreHeader {
-  font-size: .4em;
+  font-size: 0.4em;
   color: hsl(229, 64%, 46%);
   margin: 0;
-  letter-spacing: .2em;
-  
+  letter-spacing: 0.2em;
 }
 .ScoreCount {
   color: hsl(229, 25%, 31%);
@@ -48,25 +47,23 @@
   margin: 0;
 }
 
-.ScoreContainer{
+.ScoreContainer {
   background-color: white;
   height: 50px;
   border-radius: 5px;
   padding: 1.5% 5%;
   text-align: center;
- 
 }
-
 
 /*  Rules Button Section */
 .RulesButton {
   background-color: transparent;
-  border: solid 1px rgba(255,255,255,.5);
+  border: solid 1px rgba(255, 255, 255, 0.5);
   border-radius: 3px;
   color: white;
-  font-size: .4em;
-  padding: .5% 2.5%;
-  letter-spacing: .25em;
+  font-size: 0.4em;
+  padding: 0.5% 2.5%;
+  letter-spacing: 0.25em;
 }
 
 .RulesButton:hover {
@@ -74,13 +71,12 @@
   color: hsl(229, 64%, 46%);
 }
 
-
-.RulesButtonContainer{
+.RulesButtonContainer {
   display: flex;
+  margin-top: 15%;
   padding-right: 5%;
   justify-content: right;
 }
-
 
 /*  Modal Section */
 
@@ -92,31 +88,30 @@
   height: 100%;
   z-index: 100;
   background-color: hsl(237, 49%, 15%, 0.8);
-
 }
 
-.ModalContent{
+.ModalContent {
   text-align: center;
   width: 150px;
   border-radius: 5px;
-  background-color: rgba(255,255,255);
+  background-color: rgba(255, 255, 255);
   margin-top: 5%;
   padding: 1.5% 2.5%;
 }
 
 .closeIcon {
   max-width: 10px;
-  max-height: 10px; 
+  max-height: 10px;
   align-self: center;
 }
 
 .ModalHeader {
   display: flex;
   justify-content: space-between;
-  font-size: .5em;
+  font-size: 0.5em;
 }
 
-.ModalHeaderTitle{
+.ModalHeaderTitle {
   color: 237, 49%, 15%;
   font-size: 1.5em;
 }
@@ -128,12 +123,11 @@
 
 /*  Symbols */
 
-
 .Rock {
   position: relative;
-  box-shadow: 0.5px 1.5px rgba(255,0,0,.5);
-  width: 25px;
-  height: 25px;
+  box-shadow: 0.5px 1.5px rgba(255, 0, 0, 0.5);
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   background-color: white;
   border: 15px solid red;
@@ -142,9 +136,9 @@
 
 .Paper {
   position: relative;
-  box-shadow: 0.5px 1.5px rgba(0,0,255,.5);
-  width: 25px;
-  height: 25px;
+  box-shadow: 0.5px 1.5px rgba(0, 0, 255, 0.5);
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   background-color: white;
   border: 15px solid rgb(0, 0, 255);
@@ -153,9 +147,9 @@
 
 .Sissors {
   position: relative;
-  box-shadow: 0.5px 1.5px rgba(255,230,0,.5);
-  width: 25px;
-  height: 25px;
+  box-shadow: 0.5px 1.5px rgba(255, 230, 0, 0.5);
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   background-color: white;
   border: 15px solid rgb(255, 230, 0);
@@ -165,24 +159,138 @@
 .Symbol {
   position: relative;
   z-index: 0;
-  box-shadow: 0.5px 1.5px rgba(0,0,0,.5) inset;
-  width: 25px;
-  height: 25px;
-  margin: -6px;
+  box-shadow: 0.5px 1.5px rgba(0, 0, 0, 0.5) inset;
+  width: 30px;
+  height: 30px;
+  margin: -2px;
   padding: 25%;
   border-radius: 100%;
   background-color: white;
 }
 
 .SymbolImg {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 
 /* Backgrounds */
 
+.GridContainer {
+  margin: 0 25%;
+  display: grid;
+  grid-template-columns: [top] 31.5% [top end] 0% [mid] 31.5% [bot start] 0% [bot] 31.5%;
+  grid-template-rows: [top] 33% [mid] 33% [bot] 33%;
+}
+
+.Grid-1 {
+  justify-self: end;
+  align-self: start;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: top;
+  grid-row-end: mid;
+}
+
+.Grid-2 {
+  justify-self: start;
+  align-self: start;
+  grid-column-start: 5;
+  grid-column-end: 5;
+  grid-row-start: top;
+  grid-row-end: mid;
+  margin-right: -10px;
+}
+
+.Grid-3 {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: bot;
+  grid-row-end: bot;
+  justify-self: center;
+}
+
+.Grid-4 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: top;
+  grid-row-end: bot;
+  display: flex;
+  justify-content: center;
+  place-self: center;
+}
+
 .SelectBackground {
   position: absolute;
-  width: 25%;
+  width: 125px;
   z-index: -2;
+}
+
+/* Matching Screens */
+
+.MatchContainer {
+  margin: 5% 20%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.EmptySymbol {
+  position: relative;
+  background-color: hsl(229, 25%, 31%);
+  z-index: 0;
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+}
+
+.WinnerEnabled {
+  position: absolute;
+  border-radius: 60%;
+  opacity: 25%;
+  background: radial-gradient(circle,
+    rgba(255, 255, 255, 0.8) 0% 15%,
+    rgba(255, 255, 255, 0.5) 15% 25%,
+    rgba(255, 255, 255, 0.25) 25% 50%,
+    transparent 50% 100%
+  );
+  z-index: -3;
+}
+
+.Left {
+  top: 5%;
+  left: 4.5%;
+  position: fixed;
+  width: 65%;
+  height: 80%;
+  z-index: -3;
+}
+
+.Right {
+  top: 5%;
+  left: 25%;
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  z-index: -3;
+}
+
+/*  Play Again */ 
+
+.PlayAgainContainer {
+   text-align: center;
+   color: white;
+}
+
+.PlayAgainButton{
+  background-color: white;
+  font-size: .35em;
+  letter-spacing: .15em;
+  font-weight: 700;
+  padding: 5% 15%;
+  border-radius: 5px;
+  color: hsl(214, 47%, 23%);
+  border: none;
+
+}
+.PlayAgainButton:hover {
+  color: red;
 }
