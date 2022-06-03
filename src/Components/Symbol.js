@@ -1,7 +1,6 @@
 import React from "react";
 
 function Symbol(props) {
-    
   return (
     <div onClick={() => props.Selected(props.choice)} className="SymbolContainer">
       <div className={props.choice.name}>

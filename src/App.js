@@ -8,10 +8,10 @@ import Scoreboard from "./Components/Scoreboard.js";
 
 function App() {
   const [isVisible, setIsVisible] = useState("hidden");
-  const [Score, setScore] = useState(0);
-  const [Left, setLeft] = useState("Enabled");
+  const [Left, setLeft] = useState("Disabled");
   const [Right, setRight] = useState("Disabled");
-
+  const [Score, setScore] = useState(0);
+  
   function ToggleRules() {
     if (isVisible === "hidden") {
       setIsVisible("");

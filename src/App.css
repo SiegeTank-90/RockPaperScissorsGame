@@ -176,9 +176,9 @@
 /* Backgrounds */
 
 .GridContainer {
-  margin: 0 25%;
+  margin: 0 42.5%;
   display: grid;
-  grid-template-columns: [top] 31.5% [top end] 0% [mid] 31.5% [bot start] 0% [bot] 31.5%;
+  grid-template-columns: [top] 20% [top end] 0% [mid] 20% [bot start] 0% [bot] 20%;
   grid-template-rows: [top] 33% [mid] 33% [bot] 33%;
 }
 
@@ -244,53 +244,121 @@
 
 .WinnerEnabled {
   position: absolute;
-  border-radius: 60%;
+  border-radius: 100%;
   opacity: 25%;
-  background: radial-gradient(circle,
+  background: radial-gradient(
+    circle,
     rgba(255, 255, 255, 0.8) 0% 15%,
     rgba(255, 255, 255, 0.5) 15% 25%,
-    rgba(255, 255, 255, 0.25) 25% 50%,
-    transparent 50% 100%
+    rgba(255, 255, 255, 0.25) 25% 35%,
+    transparent 35% 50%
   );
   z-index: -3;
 }
 
 .Left {
-  top: 5%;
-  left: 4.5%;
+  top: 0%;
+  left: 0;
   position: fixed;
-  width: 65%;
-  height: 80%;
+  width: 55%;
+  height: 65%;
   z-index: -3;
 }
 
 .Right {
-  top: 5%;
-  left: 25%;
+  top: 0%;
+  left: 28%;
   position: fixed;
   width: 80%;
-  height: 80%;
+  height: 65%;
   z-index: -3;
 }
 
-/*  Play Again */ 
+/*  Play Again */
 
 .PlayAgainContainer {
-   text-align: center;
-   color: white;
+  text-align: center;
+  color: white;
+  margin: 0% 5%;
 }
 
-.PlayAgainButton{
+.PlayAgainButton {
   background-color: white;
-  font-size: .35em;
-  letter-spacing: .15em;
+  font-size: 0.35em;
+  letter-spacing: 0.15em;
   font-weight: 700;
   padding: 5% 15%;
   border-radius: 5px;
   color: hsl(214, 47%, 23%);
   border: none;
-
 }
 .PlayAgainButton:hover {
   color: red;
+}
+
+.PlayAgainTitle {
+  width: 100px;
+  font-size: 1.5em;
+}
+
+@media only screen and (max-width: 1020px) {
+  .Left {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 55%;
+    height: 55%;
+    z-index: -3;
+  }
+
+  .Right {
+    top: 0%;
+    left: 33%;
+    position: fixed;
+    width: 80%;
+    height: 55%;
+    z-index: -3;
+  }
+
+}
+
+@media only screen and (max-width: 775px) {
+  .Left {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 55%;
+    height: 45%;
+    z-index: -3;
+  }
+
+  .Right {
+    top: 0%;
+    left: 33%;
+    position: fixed;
+    width: 80%;
+    height: 45%;
+    z-index: -3;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  .Left {
+    top: 0%;
+    left: 0;
+    position: fixed;
+    width: 55%;
+    height: 25%;
+    z-index: -3;
+  }
+
+  .Right {
+    top: 0%;
+    left: 33%;
+    position: fixed;
+    width: 80%;
+    height: 25%;
+    z-index: -3;
+  }
 }
